@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cds.apiCds.repository.CdRepo;
 import com.cds.apiCds.repository.entity.CdEntity;
+import com.cds.apiCds.service.CdsService;
 
 @RestController
 @RequestMapping(value = "/controller")
 public class CdsController {
 	@Autowired
-	CdRepo repo;
-	
+	CdsService service;
+
 	@GetMapping("/cds")
-	public List<CdEntity> cds(){
-		return repo.findAll().str;
+	public List<CdEntity> cds() {
+		return service.listAll();
 	}
 
 }

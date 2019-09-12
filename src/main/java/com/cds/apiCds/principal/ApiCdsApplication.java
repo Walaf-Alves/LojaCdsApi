@@ -1,4 +1,4 @@
-package com.cds.apiCds;
+package com.cds.apiCds.principal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
