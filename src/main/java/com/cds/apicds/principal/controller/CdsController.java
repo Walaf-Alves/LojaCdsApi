@@ -1,4 +1,4 @@
-package com.cds.apiCds.controller;
+package com.cds.apicds.principal.controller;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cds.apiCds.repository.entity.CdEntity;
-import com.cds.apiCds.service.CdsService;
+import com.cds.apicds.principal.primarydb.entity.CdEntity;
+import com.cds.apicds.principal.service.CdsService;
 
 @RestController
 @RequestMapping(value = "/controller")

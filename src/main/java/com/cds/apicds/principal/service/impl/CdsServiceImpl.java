@@ -1,4 +1,4 @@
-package com.cds.apiCds.service.impl;
+package com.cds.apicds.principal.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,9 +8,9 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cds.apiCds.repository.CdRepo;
-import com.cds.apiCds.repository.entity.CdEntity;
-import com.cds.apiCds.service.CdsService;
+import com.cds.apicds.principal.primarydb.entity.CdEntity;
+import com.cds.apicds.principal.primarydb.repository.CdRepo;
+import com.cds.apicds.principal.service.CdsService;
 import com.google.common.collect.Lists;
 
 @Service
@@ -19,7 +19,7 @@ public class CdsServiceImpl implements CdsService {
 	public static final Logger log = Logger.getLogger(CdsServiceImpl.class);
 
 	@Autowired
-	CdRepo repo;
+	CdRepo repo;;
 
 	@Override
 	public Boolean save(CdEntity entity) {
@@ -49,7 +49,7 @@ public class CdsServiceImpl implements CdsService {
 	public List<CdEntity> listAll() {
 		ArrayList<CdEntity> listCds = Lists.newArrayList(repo.findAll());
 		if (listCds.isEmpty() || Objects.isNull(listCds)) {
-			log.info("Não forma encontrados nenhum cd na base de dados!");
+			log.info("Não foram encontrados nenhum cd na base de dados!");
 			return null;
 		}
 		return listCds;

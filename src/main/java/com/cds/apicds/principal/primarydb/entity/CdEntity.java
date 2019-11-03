@@ -1,4 +1,4 @@
-package com.cds.apiCds.repository.entity;
+package com.cds.apicds.principal.primarydb.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,9 +9,11 @@ import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 @Data
 @Entity
 @Table(name = "Cds")
@@ -21,10 +23,10 @@ public class CdEntity {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	private String artist;
+	private String name;
 
-	private String genre;
-
-	private String album;
+	public CdEntity(String name) {
+		this.name = name;
+	}
 
 }
