@@ -28,9 +28,9 @@ public class CdsController {
 	@ApiOperation(value = "Lista todos os cds")
 	@GetMapping("/cds")
 	public List<CdEntity> cds() {
-		service.save(new CdEntity("riks"));
-		service.save(new CdEntity("relens"));
-		service.save(new CdEntity("rowlens"));
+		service.save(new CdEntity("riks","Rock","Blue",9.25));
+		service.save(new CdEntity("relens","Piseiro", "Yellow",10.0));
+		service.save(new CdEntity("rowlens", "Funk", "Red", -50.0));
 		return service.listAll();
 	}
 
