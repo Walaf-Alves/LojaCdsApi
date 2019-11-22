@@ -3,6 +3,7 @@ package com.cds.apicds.principal.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class CdsServiceImpl implements CdsService {
 			return true;
 		} else {
 			log.info("O objeto informado é nulo");
-			return null;
+			return false;
 		}
 	}
 
@@ -53,6 +54,25 @@ public class CdsServiceImpl implements CdsService {
 			return null;
 		}
 		return listCds;
+	}
+
+	@Override
+	public Boolean delete(Long id) {
+		Optional<CdEntity> findById = repo.findById(id);
+		if (findById.isPresent()) {
+			log.info("Deletando: " + findById.get().getName());
+			repo.deleteById(id);
+			return true;
+		} else {
+			log.info("Não foi possivel achar nenhum cd com o id informado: " + id);
+			return false;
+		}
+	}
+
+	@Override
+	public Boolean update() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
