@@ -70,8 +70,10 @@ public class CdsServiceImpl implements CdsService {
 	}
 
 	@Override
-	public Boolean update() {
-		// TODO Auto-generated method stub
+	public Boolean update(CdEntity cd) {
+		CdEntity find = findOne(cd.getId());
+		find.setName(cd.getName());
+		repo.save(find);
 		return null;
 	}
 
