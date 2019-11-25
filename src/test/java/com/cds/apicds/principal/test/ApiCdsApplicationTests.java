@@ -10,12 +10,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.cds.apicds.principal.primarydb.entity.CdEntity;
 import com.cds.apicds.principal.service.CdsService;
-import com.cds.apicds.principal.service.impl.CdsServiceImpl;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -28,7 +26,7 @@ public class ApiCdsApplicationTests {
 
 	@Before
 	public void setUp() {
-		service.save(new CdEntity("xesquem"));
+		service.save(new CdEntity("xesquem", "Hip Hop", "Green", 1.0));
 	}
 
 	@Test

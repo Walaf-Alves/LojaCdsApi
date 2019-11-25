@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <form class="register-form" onSubmit="saveData(event)">
+            <label for="music">Nome</label>
+            <input type="String" id="name" name="music" placeholder="Music..">
+            <label for="gender">Genero</label>
+            <input type="String" id="genre" name="gender" placeholder="Gender..">
+            <label for="album">Album</label>
+            <input type="String" id="album" name="album" placeholder="Album..">
+            <label for="price">Preço</label>
+            <input type="Number" id="price" name="price" placeholder="Price..">
+
+            <input type="submit" id="btnSave" value="Submit">
+        </form>
+    </div>
+
+    <div id="table">
+        <table border="=1">
+            <thead>
+                <tr>
+                    <th> Id </th>
+                    <th> Nome </th>
+                    <th> Genero </th>
+                    <th> Album </th>
+                    <th> Preço </th>
+                    <th> Delete </th>
+                    <th> Edit </th>
+                </tr>
+            </thead>
+            <tbody class="details">
+            </tbody>
+        </table>
+    </div>
+
+    
+    <script src="js/index.js"></script>
+
+</body>
+</html>

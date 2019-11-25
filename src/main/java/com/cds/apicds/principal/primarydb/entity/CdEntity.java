@@ -25,8 +25,17 @@ public class CdEntity {
 
 	private String name;
 
-	public CdEntity(String name) {
+	private String genre;
+
+	private String album;
+
+	private Double price;
+
+	public CdEntity(String name, String genre, String album, Double price) {
 		this.name = name;
+		this.genre = genre;
+		this.album = album;
+		this.price = price;
 	}
 
 }

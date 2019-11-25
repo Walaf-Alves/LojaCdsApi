@@ -13,5 +13,9 @@ public interface CdsService {
 
 	public CdEntity findOne(Long id);
 
+	public Boolean delete(Long id);
+
+	public Boolean update(CdEntity entity);
+
 	public List<CdEntity> listAll();
 }
